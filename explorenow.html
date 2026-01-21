@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dharohar – Explore Now</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+<script>
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        colors: {
+                                                "primary": "#ec4913",
+                                                "background-light": "#f8f6f6",
+                                                "background-dark": "#221510",
+                                        },
+                                        fontFamily: {
+                                                "display": ["Newsreader"]
+                                        },
+                                        borderRadius: {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                },
+                        },
+                }
+        </script>
+<style>
+                body {
+                        font-family: 'Newsreader', serif;
+                }
+        </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20 border-b border-primary/20 dark:border-primary/30">
+<div class="flex items-center gap-3">
+<img src="Logo.png" alt="Description" class="h-14 w-14" />
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-2xl font-bold text-stone-900 dark:text-white">Dharohar</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-base font-medium text-primary" href="home.html">Home</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="museumpage.html">Museum</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="map.html">Map</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="stories.html">Stories</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<button class="px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Sign Up</button>
+<button class="px-6 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Login</button>
+</div>
+<button class="md:hidden">
+<svg class="w-6 h-6 text-stone-800 dark:text-stone-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUgRijJRm8IuWJ3NAH0BhL5OeesH56oURLqnIj4T-8cz_3WwFoRL7UziRq_LwtbLnjAHxOF1MbrPyUcyp_JulfQp0vxNf35wuiinDZnW1GT92jDH-9XIyGM4I-f0MsGM3_1WZOIStjMT3jJhgcqa2ys3v6548OGThl-Ed0wfbe1yEzxo441tauO86B3Vzs3GuWAWnr8kPtx8IoXP8TNPfjA3uFBFB5gUxDmiX1rYZ_US70jtWjU6mM50YYm8GAoP0MQn62r5pwQLk');">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl md:text-6xl font-bold drop-shadow-lg animate-fade-in-down">Explore Now</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl drop-shadow animate-fade-in-up">Dive deeper into India’s living traditions, arts, and history.</p>
+</div>
+</section>
+<section class="py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12 max-w-2xl mx-auto">
+<div class="relative">
+<input class="w-full pl-12 pr-4 py-4 rounded-full bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 focus:ring-2 focus:ring-primary focus:outline-none text-lg" placeholder="Search for categories like 'Digital Museum', 'Stories', etc." type="search"/>
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<svg class="h-6 w-6 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<a class="group block bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" href="#">
+<div class="overflow-hidden rounded-lg mb-4">
+<div class="h-48 bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDa1-cyeQ7TLqKvbnGTkTmTD0v2C2lz65yDmYP-gNZgDbIG4RrQ5vq0H55QUG_9f7Q348cMdfV6S8y_WvFgnXXP2amVvTWUyIBlIo3KoNWe-rQ0zxg8OmQ2rUHlkcXY8_G_js807nwisWgFSU-Q2wWf6d2BfOSpOverjVMtDgUKOuxJMyGTFNV46WYU32l__Vk3o2Gjlckg8kgQyDyGz0U_M69mbXka4RYCv04AbMiX32QfCMU4pvJotbbadwZfb0wp3srM1cMJliE');"></div>
+</div>
+<h3 class="text-xl font-bold text-stone-900 dark:text-white">Digital Museum</h3>
+<p class="mt-1 text-base text-stone-600 dark:text-stone-400">Explore virtual exhibits of Indian art and history.</p>
+</a>
+<a class="group block bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" href="#">
+<div class="overflow-hidden rounded-lg mb-4">
+<div class="h-48 bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEVkE_JFDrfPci9IgFXXebRteEna0zv6Uj28mnPGCZ_AJfMVIiJ5K_d2Lo8WP0z4R6BBEQg9q_lQsNw6h6sP4ud_Ee3TPtMA4tbP3fKMPBDyNtElk2Ire4rEL3SDWw9hKQ1RGLkWvsgXyIwLB7exkawp4_l7nnbZwjsCWC3I_BPaJ8lqk5d9WFMRDADiNz9rW4JZWVJ_oqKc2JLSbgkSsnlJ5019KbfFjBkQ22Th2TnmQCXCKD0C_BgUG6XaB1XaRHX-dkK6cIykE');"></div>
+</div>
+<h3 class="text-xl font-bold text-stone-900 dark:text-white">Interactive Map</h3>
+<p class="mt-1 text-base text-stone-600 dark:text-stone-400">Navigate India's cultural sites and traditions.</p>
+</a>
+<a class="group block bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" href="#">
+<div class="overflow-hidden rounded-lg mb-4">
+<div class="h-48 bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPu_ZZT256BrnCnyruWt_RNr_FQMVJonr_GmhIKJWN_1QMaaqDOOyQ5hHbe4BX-qdVQrck-J89j8U_C_fzpKZShv9jy3aP7QZPk8EJWqvCqeDQQlmwo74SumRsYUcP-heHEdfv--l5SlmhXMmj7TulaMKyoHLkT1RKGiF-k8VwYYYixWlPcLaEm7mItKLV2QCICijwFEKVm5Ztc4V_bV3xgpBx5JQiEuE9Lap6LQUJFb66BcSeeIOwEk7MF8QCMQWFahOfNle_9dA');"></div>
+</div>
+<h3 class="text-xl font-bold text-stone-900 dark:text-white">Stories &amp; Festivals</h3>
+<p class="mt-1 text-base text-stone-600 dark:text-stone-400">Discover captivating stories and vibrant festivals.</p>
+</a>
+<a class="group block bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300" href="#">
+<div class="overflow-hidden rounded-lg mb-4">
+<div class="h-48 bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-BzKxDfVJwnEJtHSoko4PjVH3q5WpNGJohtGX9QUBIvKhMydSn-nhKqarFJob57HESCDxGyCaVh99lRzLnAQE0IEK1DgPyAi2P80iOdYqJ42KrLFMiWjeAqqw4b8pEcIYwjTm_iNCusLUcYwjLb5A0EVMEQf4OIvlbMi6HH22_v7T_Vpb5pmCHouQ1K6Fh66cvu-O6O5UC7ga8hBCoKTFFOyCrMt1pD-FO4_5TAIiJHP1dlP7yyrXFun8vc2LxCBY4izuNDUaruU');"></div>
+</div>
+<h3 class="text-xl font-bold text-stone-900 dark:text-white">Artisan Marketplace</h3>
+<p class="mt-1 text-base text-stone-600 dark:text-stone-400">Support artisans and shop unique crafts.</p>
+</a>
+</div>
+<div class="mt-16 text-center">
+<button class="px-10 py-4 rounded-lg bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-all duration-300 transform hover:scale-105">
+                                                        Start Your Journey
+                                                </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contribute.html">Contribute</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</div>
+<div class="flex justify-center gap-6 mb-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 4.52c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm-1.002 2.182c-1.026.046-1.636.21-2.17.41a3.002 3.002 0 00-1.116.853 3.002 3.002 0 00-.853 1.116c-.2.534-.365 1.144-.41 2.17-.047 1.02-.058 1.35-.058 3.659s.01 2.639.058 3.659c.045 1.026.21 1.636.41 2.17a3.002 3.002 0 00.853 1.116 3.002 3.002 0 001.116.853c.534.2 1.144.365 2.17.41 1.02.047 1.35.058 3.659.058s2.639-.01 3.659-.058c1.026-.045 1.636-.21 2.17-.41a3.002 3.002 0 001.116-.853 3.002 3.002 0 00.853-1.116c.2-.534.365-1.144.41-2.17.047-1.02.058-1.35.058-3.659s-.01-2.639-.058-3.659c-.045-1.026-.21-1.636-.41-2.17a3.002 3.002 0 00-.853-1.116 3.002 3.002 0 00-1.116-.853c-.534-.2-1.144-.365-2.17-.41-1.02-.047-1.35-.058-3.659-.058zM12 8.438a3.563 3.563 0 100 7.125 3.563 3.563 0 000-7.125zm0 9.25a5.688 5.688 0 110-11.375 5.688 5.688 0 010 11.375zM17.625 6.375a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.701V8.115l6.864 4.036-6.864 3.734z"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+</svg>
+</a>
+</div>
+<p class="text-center text-sm text-stone-500 dark:text-stone-400">© 2025 Dharohar. All rights reserved.</p>
+</div>
+</footer>
+</div>
+<style>
+                @keyframes fade-in-down {
+                        0% {
+                                opacity: 0;
+                                transform: translateY(-20px);
+                        }
+                        100% {
+                                opacity: 1;
+                                transform: translateY(0);
+                        }
+                }
+                @keyframes fade-in-up {
+                        0% {
+                                opacity: 0;
+                                transform: translateY(20px);
+                        }
+                        100% {
+                                opacity: 1;
+                                transform: translateY(0);
+                        }
+                }
+                .animate-fade-in-down {
+                        animation: fade-in-down 0.8s ease-out forwards;
+                }
+                .animate-fade-in-up {
+                        animation: fade-in-up 0.8s ease-out 0.2s forwards;
+                        opacity: 0;
+                }
+        </style>
+
+</body></html>

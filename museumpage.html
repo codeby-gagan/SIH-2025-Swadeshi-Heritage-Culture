@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Dharohar – Museum</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec4913", // Terracotta/Saffron
+            "secondary": "#221510", // Deep Blue/Maroon-like
+            "accent": "#FFD700", // Gold
+            "background-light": "#f8f6f6",
+            "background-dark": "#1a1a1a",
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"],
+            "body": ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Newsreader', serif;
+    }
+
+    .timeline-item {
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .timeline-scrollbar::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .timeline-scrollbar::-webkit-scrollbar-track {
+      background: #e0e0e0;
+      border-radius: 10px;
+    }
+
+    .timeline-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #ec4913;
+      border-radius: 10px;
+    }
+
+    .dark .timeline-scrollbar::-webkit-scrollbar-track {
+      background: #4a4a4a;
+    }
+
+    .dark .timeline-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #ec4913;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-200">
+  <div class="flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20 border-b border-primary/20 dark:border-primary/30">
+          <div class="flex items-center gap-3">
+            <img src="Logo.png" alt="Description" class="h-14 w-14" />
+            <path clip-rule="evenodd"
+              d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+              fill="currentColor" fill-rule="evenodd"></path>
+            <path clip-rule="evenodd"
+              d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+              fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+            <h1 class="text-2xl font-bold text-stone-900 dark:text-white">Dharohar</h1>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a class="text-base font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+            <a class="text-base font-medium hover:text-primary transition-colors" href="museumpage.html">Museum</a>
+            <a class="text-base font-medium hover:text-primary transition-colors" href="map.html">Map</a>
+            <a class="text-base font-medium hover:text-primary transition-colors" href="stories.html">Stories</a>
+            <a class="text-base font-medium hover:text-primary transition-colors"
+              href="marketplace.html">Marketplace</a>
+          </nav>
+          <div class="hidden md:flex items-center gap-4">
+            <a href="signup.html"
+              class="px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">
+              Sign Up
+            </a>
+
+            <a href="login.html"
+              class="px-6 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+              Login
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <section class="relative h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center"
+        style="background-image: linear-gradient(rgba(34, 21, 16, 0.6), rgba(34, 21, 16, 0.8)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUgRijJRm8IuWJ3NAH0BhL5OeesH56oURLqnIj4T-8cz_3WwFoRL7UziRq_LwtbLnjAHxOF1MbrPyUcyp_JulfQp0vxNf35wuiinDZnW1GT92jDH-9XIyGM4I-f0MsGM3_1WZOIStjMT3jJhgcqa2ys3v6548OGThl-Ed0wfbe1yEzxo441tauO86B3Vzs3GuWAWnr8kPtx8IoXP8TNPfjA3uFBFB5gUxDmiX1rYZ_US70jtWjU6mM50YYm8GAoP0MQn62r5pwQLk');">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg font-display text-white">Digital Museum
+          </h2>
+          <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl drop-shadow font-body text-stone-200">Explore India’s
+            monuments, art &amp; living traditions in immersive galleries.</p>
+        </div>
+      </section>
+      <section class="py-16 sm:py-24 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-900 dark:text-white font-display">
+            Virtual Galleries</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-secondary rounded-xl shadow-lg overflow-hidden group">
+              <div class="h-64 bg-cover bg-center" style="background-image: url('architecture.jpg');"></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold font-display text-stone-900 dark:text-white">Architecture</h4>
+                <p class="mt-2 text-base text-stone-600 dark:text-stone-400 font-body">Journey through centuries of
+                  monumental wonders.</p>
+                <button
+                  class="mt-4 px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">View
+                  Gallery</button>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-secondary rounded-xl shadow-lg overflow-hidden group">
+              <div class="h-64 bg-cover bg-center" style="background-image: url('sculpture.webp');"></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold font-display text-stone-900 dark:text-white">Sculptures</h4>
+                <p class="mt-2 text-base text-stone-600 dark:text-stone-400 font-body">Witness divine forms and stories
+                  carved in stone.</p>
+                <button
+                  class="mt-4 px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">View
+                  Gallery</button>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-secondary rounded-xl shadow-lg overflow-hidden group">
+              <div class="h-64 bg-cover bg-center" style="background-image: url('paintings.jpg');"></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold font-display text-stone-900 dark:text-white">Paintings</h4>
+                <p class="mt-2 text-base text-stone-600 dark:text-stone-400 font-body">Explore vibrant narratives from
+                  miniatures to murals.</p>
+                <button
+                  class="mt-4 px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">View
+                  Gallery</button>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-secondary rounded-xl shadow-lg overflow-hidden group">
+              <div class="h-64 bg-cover bg-center" style="background-image: url('textile.jpg');"></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold font-display text-stone-900 dark:text-white">Textiles</h4>
+                <p class="mt-2 text-base text-stone-600 dark:text-stone-400 font-body">Discover the intricate threads of
+                  India's weaving legacy.</p>
+                <button
+                  class="mt-4 px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">View
+                  Gallery</button>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-secondary rounded-xl shadow-lg overflow-hidden group">
+              <div class="h-64 bg-cover bg-center" style="background-image: url('folkart.jpg');"></div>
+              <div class="p-6">
+                <h4 class="text-xl font-bold font-display text-stone-900 dark:text-white">Folk Art</h4>
+                <p class="mt-2 text-base text-stone-600 dark:text-stone-400 font-body">Celebrate the raw, vibrant soul
+                  of regional traditions.</p>
+                <button
+                  class="mt-4 px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">View
+                  Gallery</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 sm:py-24 bg-primary/5 dark:bg-secondary/20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-4 font-display text-stone-900 dark:text-white">Exhibit of the
+              Month</h3>
+          </div>
+          <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="overflow-hidden rounded-xl shadow-lg">
+              <img alt="The Great Stupa at Sanchi" class="w-full h-auto object-cover"
+                src="Great-Stupa-Sanchi-India.webp" />
+            </div>
+            <div class="text-left">
+              <h4 class="text-2xl lg:text-3xl font-bold font-display text-stone-900 dark:text-white">The Great Stupa at
+                Sanchi</h4>
+              <p class="mt-4 text-lg text-stone-600 dark:text-stone-400 font-body">Designated as a UNESCO World Heritage
+                site in 1989, the Great Stupa at Sanchi stands as a testament to the enduring legacy of Buddhist art and
+                architecture in India. Originally commissioned by the Mauryan emperor Ashoka in the 3rd century BCE,
+                this monumental structure has witnessed centuries of additions and renovations, each layer adding to its
+                rich historical narrative.</p>
+              <p class="mt-4 text-lg text-stone-600 dark:text-stone-400 font-body">Explore the intricate carvings of its
+                toranas (gateways) which depict scenes from the life of the Buddha and the Jataka tales, offering a
+                window into the spiritual and cultural milieu of ancient India.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 sm:py-24 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 font-display text-stone-900 dark:text-white">
+            Interactive Timeline of Indian History</h3>
+          <div class="relative">
+            <div class="absolute top-1/2 left-0 w-full h-1 bg-primary/20 dark:bg-primary/40 -translate-y-1/2"></div>
+            <div class="flex overflow-x-auto pb-8 timeline-scrollbar">
+              <div class="flex space-x-8 md:space-x-16 px-4">
+                <div class="flex-shrink-0 w-64 text-center timeline-item">
+                  <div
+                    class="bg-primary text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto relative z-10 border-4 border-background-light dark:border-background-dark shadow-md">
+                    <p class="text-lg font-bold">3300 BC</p>
+                  </div>
+                  <h4 class="mt-4 text-xl font-bold font-display text-stone-900 dark:text-white">Harappan Era</h4>
+                  <p class="mt-1 text-sm text-stone-600 dark:text-stone-400 font-body">Rise of the Indus Valley
+                    Civilization, one of the world's first urban cultures.</p>
+                </div>
+                <div class="flex-shrink-0 w-64 text-center timeline-item">
+                  <div
+                    class="bg-secondary dark:bg-primary/80 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto relative z-10 border-4 border-background-light dark:border-background-dark shadow-md">
+                    <p class="text-lg font-bold">322 BC</p>
+                  </div>
+                  <h4 class="mt-4 text-xl font-bold font-display text-stone-900 dark:text-white">Mauryan Empire</h4>
+                  <p class="mt-1 text-sm text-stone-600 dark:text-stone-400 font-body">Chandragupta Maurya establishes
+                    one of India's largest empires, later ruled by Ashoka.</p>
+                </div>
+                <div class="flex-shrink-0 w-64 text-center timeline-item">
+                  <div
+                    class="bg-primary text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto relative z-10 border-4 border-background-light dark:border-background-dark shadow-md">
+                    <p class="text-lg font-bold">1526 AD</p>
+                  </div>
+                  <h4 class="mt-4 text-xl font-bold font-display text-stone-900 dark:text-white">Mughal Era</h4>
+                  <p class="mt-1 text-sm text-stone-600 dark:text-stone-400 font-body">A period of rich art and
+                    architecture, including the construction of the Taj Mahal.</p>
+                </div>
+                <div class="flex-shrink-0 w-64 text-center timeline-item">
+                  <div
+                    class="bg-secondary dark:bg-primary/80 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto relative z-10 border-4 border-background-light dark:border-background-dark shadow-md">
+                    <p class="text-lg font-bold">1947 AD</p>
+                  </div>
+                  <h4 class="mt-4 text-xl font-bold font-display text-stone-900 dark:text-white">Modern India</h4>
+                  <p class="mt-1 text-sm text-stone-600 dark:text-stone-400 font-body">India gains independence, marking
+                    the beginning of a new democratic era.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 sm:py-24 bg-primary/5 dark:bg-secondary/20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 class="text-3xl md:text-4xl font-bold max-w-2xl mx-auto font-display text-stone-900 dark:text-white">
+            Become a Part of the Story</h3>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600 dark:text-stone-400 font-body">Our heritage is a
+            living, breathing tapestry woven from countless threads. Share your own family photos, regional histories,
+            or cultural stories to help us build a more complete picture of India's diverse legacy.</p>
+          <div class="mt-8">
+            <button
+              class="px-10 py-4 rounded-lg bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-colors font-body">Contribute
+              Your Photos or Stories</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30 font-body">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+          <a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors"
+            href="about.html">About</a>
+          <a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors"
+            href="contact.html">Contact</a>
+          <a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors"
+            href="contribute.html">Contribute</a>
+          <a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors"
+            href="marketplace.html">Marketplace</a>
+        </div>
+        <div class="flex justify-center gap-6 mb-8">
+          <a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+            <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path clip-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 4.52c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm-1.002 2.182c-1.026.046-1.636.21-2.17.41a3.002 3.002 0 00-1.116.853 3.002 3.002 0 00-.853 1.116c-.2.534-.365 1.144-.41 2.17-.047 1.02-.058 1.35-.058 3.659s.01 2.639.058 3.659c.045 1.026.21 1.636.41 2.17a3.002 3.002 0 00.853 1.116 3.002 3.002 0 001.116.853c.534.2 1.144.365 2.17.41 1.02.047 1.35.058 3.659.058s2.639-.01 3.659-.058c1.026-.045 1.636-.21 2.17-.41a3.002 3.002 0 001.116-.853 3.002 3.002 0 00.853-1.116c.2-.534.365-1.144.41-2.17.047-1.02.058-1.35.058-3.659s-.01-2.639-.058-3.659c-.045-1.026-.21-1.636-.41-2.17a3.002 3.002 0 00-.853-1.116 3.002 3.002 0 00-1.116-.853c-.534-.2-1.144-.365-2.17-.41-1.02-.047-1.35-.058-3.659-.058zM12 8.438a3.563 3.563 0 100 7.125 3.563 3.563 0 000-7.125zm0 9.25a5.688 5.688 0 110-11.375 5.688 5.688 0 010 11.375zM17.625 6.375a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
+                fill-rule="evenodd"></path>
+            </svg>
+          </a>
+          <a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+            <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.701V8.115l6.864 4.036-6.864 3.734z">
+              </path>
+            </svg>
+          </a>
+          <a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+            <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <p class="text-center text-sm text-stone-500 dark:text-stone-400">© 2025 Dharohar. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

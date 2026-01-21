@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dharohar – Cultural Map of India</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec4913",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+        .india-map {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .state {
+            fill: #e0d9d4;
+            stroke: #ffffff;
+            stroke-width: 1px;
+            transition: fill 0.3s ease;
+            cursor: pointer;
+        }
+        .state:hover {
+            fill: #ec4913;
+        }
+        .popup-card {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            width: 250px;
+            pointer-events: none;
+        }
+        .state:hover + .popup-card, .state-group:hover .popup-card {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20 border-b border-primary/20 dark:border-primary/30">
+<div class="flex items-center gap-3">
+<img src="Logo.png" alt="Description" class="h-14 w-14" />
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-2xl font-bold text-stone-900 dark:text-white">Dharohar</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-base font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="museumpage.html">Museum</a>
+<a class="text-base font-bold text-primary transition-colors" href="map.html">Map</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="stories.html">Stories</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<a href="signup.html" class="px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">
+  Sign Up
+</a>
+<a href="login.html" class="px-6 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+  Login
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="py-16 sm:py-24 text-center bg-primary/5 dark:bg-primary/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl md:text-6xl font-bold text-stone-900 dark:text-white drop-shadow-lg">Cultural Map of India</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-stone-600 dark:text-stone-300 drop-shadow">Explore festivals, art forms and traditions state by state.</p>
+</div>
+</section>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="flex-1 lg:order-2 relative" style="height: 70vh;">
+<svg class="india-map" viewBox="0 0 600 700">
+<g class="state-group">
+<path class="state" d="M 270,50 L 300,30 L 330,50 L 320,80 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="335" y="30">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Jammu &amp; Kashmir</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Festivals:</strong> Tulip Festival</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Crafts:</strong> Pashmina Shawls</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 250,90 L 320,90 L 300,150 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="310" y="110">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Rajasthan</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Festivals:</strong> Pushkar Fair, Teej</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Crafts:</strong> Blue Pottery, Puppets</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 330,160 L 400,150 L 420,220 L 350,230 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="425" y="180">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Uttar Pradesh</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Monuments:</strong> Taj Mahal</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Cuisine:</strong> Awadhi Cuisine</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 280,240 L 350,240 L 340,320 L 290,310 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="355" y="260">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Madhya Pradesh</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Monuments:</strong> Khajuraho</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Handicrafts:</strong> Gond Painting</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 200,160 L 270,160 L 260,250 L 190,240 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="100" y="180">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Gujarat</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Festivals:</strong> Navratri</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Handicrafts:</strong> Bandhani</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 270,330 L 340,330 L 330,400 L 280,400 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="345" y="350">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Maharashtra</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Festivals:</strong> Ganesh Chaturthi</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Cuisine:</strong> Vada Pav</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 280,410 L 350,410 L 340,480 L 290,470 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="355" y="430">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Karnataka</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Monuments:</strong> Hampi</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Handicrafts:</strong> Mysore Silk</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 290,490 L 360,490 L 350,560 L 300,550 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="365" y="510">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">Tamil Nadu</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Festivals:</strong> Pongal</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Cuisine:</strong> Chettinad Cuisine</p>
+</div>
+</foreignObject>
+</g>
+<g class="state-group">
+<path class="state" d="M 430,230 L 500,220 L 520,290 L 450,300 z"></path>
+<foreignObject class="popup-card" height="200" width="250" x="525" y="250">
+<div class="bg-white dark:bg-background-dark p-4 rounded-lg shadow-lg">
+<h3 class="font-bold text-lg text-stone-900 dark:text-white mb-2">West Bengal</h3>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Festivals:</strong> Durga Puja</p>
+<p class="text-sm text-stone-600 dark:text-stone-400"><strong>Cuisine:</strong> Mishti Doi</p>
+</div>
+</foreignObject>
+</g>
+</svg>
+</div>
+<div class="lg:w-1/4 lg:order-1">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30">
+<h4 class="text-xl font-bold mb-4 text-stone-900 dark:text-white">Filters &amp; Legend</h4>
+<div class="space-y-3">
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 text-primary rounded border-primary/50 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-stone-700 dark:text-stone-300">Festivals</span>
+</label>
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 text-primary rounded border-primary/50 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-stone-700 dark:text-stone-300">Monuments</span>
+</label>
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 text-primary rounded border-primary/50 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-stone-700 dark:text-stone-300">Handicrafts</span>
+</label>
+<label class="flex items-center">
+<input checked="" class="form-checkbox h-5 w-5 text-primary rounded border-primary/50 focus:ring-primary/50" type="checkbox"/>
+<span class="ml-2 text-stone-700 dark:text-stone-300">Cuisine</span>
+</label>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 mt-8">
+<h4 class="text-xl font-bold mb-4 text-stone-900 dark:text-white">Festival of the Month</h4>
+<div class="group">
+<div class="overflow-hidden rounded-lg">
+<div class="h-48 bg-cover bg-center rounded-lg group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMTZWCFJnG_aBXT4mLQ6FGdInAMmcBtkdUM7TZOhW_LsbpMHivbl3-soZHkhZh7-9Z1a_nypvEM1Y6zDgAri-FglK62ppjF2-CTVk_ltZCOLSFLZ2mRrY6RVJzg4ocjfPljupJVIPFEuDLdPViNmeyVoxlmZeVfE1W060LaTocb7XR2AiXPjR3SkTCTeoNZtkTwWJ7BQdJMAzW4-LBPFf297O4UQANjomJKsPZIE81JVfhWVx9rtnQ-zxyEcRklF2V3n39RO0tl7Y');"></div>
+</div>
+<h5 class="mt-4 text-lg font-bold text-stone-900 dark:text-white">Holi - Festival of Colors</h5>
+<p class="mt-1 text-base text-stone-600 dark:text-stone-400">Celebrated across India, marking the arrival of spring and the victory of good over evil.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contribute.html">Contribute</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</div>
+<div class="flex justify-center gap-6 mb-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 4.52c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm-1.002 2.182c-1.026.046-1.636.21-2.17.41a3.002 3.002 0 00-1.116.853 3.002 3.002 0 00-.853 1.116c-.2.534-.365 1.144-.41 2.17-.047 1.02-.058 1.35-.058 3.659s.01 2.639.058 3.659c.045 1.026.21 1.636.41 2.17a3.002 3.002 0 00.853 1.116 3.002 3.002 0 001.116.853c.534.2 1.144.365 2.17.41 1.02.047 1.35.058 3.659.058s2.639-.01 3.659-.058c1.026-.045 1.636-.21 2.17-.41a3.002 3.002 0 001.116-.853 3.002 3.002 0 00.853-1.116c.2-.534.365-1.144.41-2.17.047-1.02.058-1.35.058-3.659s-.01-2.639-.058-3.659c-.045-1.026-.21-1.636-.41-2.17a3.002 3.002 0 00-.853-1.116 3.002 3.002 0 00-1.116-.853c-.534-.2-1.144-.365-2.17-.41-1.02-.047-1.35-.058-3.659-.058zM12 8.438a3.563 3.563 0 100 7.125 3.563 3.563 0 000-7.125zm0 9.25a5.688 5.688 0 110-11.375 5.688 5.688 0 010 11.375zM17.625 6.375a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.701V8.115l6.864 4.036-6.864 3.734z"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+</svg>
+</a>
+</div>
+<p class="text-center text-sm text-stone-500 dark:text-stone-400">© 2025 Dharohar. All rights reserved.</p>
+</div>
+</footer>
+</div>
+
+</body></html>

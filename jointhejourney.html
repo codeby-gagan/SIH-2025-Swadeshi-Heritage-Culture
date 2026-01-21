@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dharohar – Join the Journey</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec4913",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+        .mandala-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM42 49c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM82 89c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill-opacity='0.1' fill='%23ec4913'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20 border-b border-primary/20 dark:border-primary/30">
+<div class="flex items-center gap-3">
+<img src="Logo.png" alt="Description" class="h-14 w-14" />
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-2xl font-bold text-stone-900 dark:text-white">Dharohar</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-base font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="museumpage.html">Museum</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="map.html">Map</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="stories.html">Stories</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<button class="px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Sign Up</button>
+<button class="px-6 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Login</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative py-24 md:py-32 flex items-center justify-center text-center bg-primary/5 dark:bg-primary/10 mandala-bg">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-stone-900 dark:text-white drop-shadow-lg">Be Part of Preserving India’s Culture</h2>
+<p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-stone-600 dark:text-stone-300 drop-shadow">Your stories, skills, and support are vital in keeping our heritage alive for generations to come. Join us in this noble cause.</p>
+</div>
+</section>
+<section class="py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-900 dark:text-white">How You Can Participate</h3>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 shadow-lg">
+<h4 class="text-2xl font-bold mb-4 text-primary">Share Your Story</h4>
+<p class="text-base text-stone-600 dark:text-stone-400 mb-6">Contribute your personal stories, family photos, or videos that celebrate Indian culture. Let's build a collective memory together.</p>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="name-story">Your Name</label>
+<input class="mt-1 block w-full rounded-md border-stone-300 dark:border-stone-600 dark:bg-stone-800 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="name-story" name="name-story" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="story">Your Story</label>
+<textarea class="mt-1 block w-full rounded-md border-stone-300 dark:border-stone-600 dark:bg-stone-800 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="story" name="story" rows="3"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="file-upload">Upload Photos/Videos</label>
+<div class="mt-1 flex justify-center rounded-md border-2 border-dashed border-stone-300 dark:border-stone-600 px-6 pt-5 pb-6">
+<div class="space-y-1 text-center">
+<svg aria-hidden="true" class="mx-auto h-12 w-12 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 48 48">
+<path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<div class="flex text-sm text-stone-600 dark:text-stone-400">
+<label class="relative cursor-pointer rounded-md bg-white dark:bg-stone-800 font-medium text-primary hover:text-primary/90 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-primary" for="file-upload-story">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload-story" name="file-upload-story" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs text-stone-500 dark:text-stone-500">PNG, JPG, GIF up to 10MB</p>
+</div>
+</div>
+</div>
+<button class="w-full px-6 py-3 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors" type="submit">Submit Story</button>
+</form>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 shadow-lg">
+<h4 class="text-2xl font-bold mb-4 text-primary">Volunteer or Collaborate</h4>
+<p class="text-base text-stone-600 dark:text-stone-400 mb-6">Lend your skills and time. We are looking for researchers, writers, designers, and event organizers to join our mission.</p>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="name-volunteer">Full Name</label>
+<input class="mt-1 block w-full rounded-md border-stone-300 dark:border-stone-600 dark:bg-stone-800 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="name-volunteer" name="name-volunteer" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="email-volunteer">Email Address</label>
+<input class="mt-1 block w-full rounded-md border-stone-300 dark:border-stone-600 dark:bg-stone-800 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="email-volunteer" name="email-volunteer" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="skills">Area of Interest / Skills</label>
+<input class="mt-1 block w-full rounded-md border-stone-300 dark:border-stone-600 dark:bg-stone-800 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="skills" name="skills" placeholder="e.g., Research, Translation, Design" type="text"/>
+</div>
+<button class="w-full px-6 py-3 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors" type="submit">Sign Up to Volunteer</button>
+</form>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30 shadow-lg flex flex-col">
+<h4 class="text-2xl font-bold mb-4 text-primary">Donate to Artisan Support</h4>
+<p class="text-base text-stone-600 dark:text-stone-400 mb-6">Your contribution directly supports local artisans, helping them sustain their craft and livelihood. Every donation makes a difference.</p>
+<div class="flex-grow"></div>
+<div class="space-y-4">
+<div class="mb-6">
+<div class="flex justify-between items-center mb-2">
+<p class="text-sm font-medium text-stone-600 dark:text-stone-400">₹3,75,000 raised</p>
+<p class="text-sm font-medium text-stone-800 dark:text-stone-200">Goal: ₹5,00,000</p>
+</div>
+<div class="w-full bg-primary/20 rounded-full h-2.5 dark:bg-primary/30">
+<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<form class="space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<button class="px-4 py-2 rounded-md border border-stone-300 dark:border-stone-600 text-center font-medium hover:bg-primary/10 dark:hover:bg-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="button">₹500</button>
+<button class="px-4 py-2 rounded-md border border-stone-300 dark:border-stone-600 text-center font-medium hover:bg-primary/10 dark:hover:bg-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="button">₹1000</button>
+<button class="px-4 py-2 rounded-md border border-stone-300 dark:border-stone-600 text-center font-medium hover:bg-primary/10 dark:hover:bg-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="button">₹2500</button>
+<button class="px-4 py-2 rounded-md border border-stone-300 dark:border-stone-600 text-center font-medium hover:bg-primary/10 dark:hover:bg-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark" type="button">Other</button>
+</div>
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300 sr-only" for="amount">Custom Amount (₹)</label>
+<input class="mt-1 block w-full rounded-md border-stone-300 dark:border-stone-600 dark:bg-stone-800 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="amount" name="amount" placeholder="Custom Amount (₹)" type="number"/>
+</div>
+<button class="w-full px-6 py-3 rounded-lg bg-primary text-white font-bold hover:bg-primary/90 transition-colors" type="submit">Proceed to Secure Payment</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 bg-primary/5 dark:bg-primary/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-900 dark:text-white">Voices of Our Community</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<blockquote class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30">
+<p class="text-lg italic text-stone-600 dark:text-stone-400">"Sharing my grandmother's recipes on Dharohar connected me with so many people who cherish the same flavors of home. It's a beautiful feeling."</p>
+<footer class="mt-4 pt-4 border-t border-primary/10 dark:border-primary/20">
+<p class="text-base font-bold text-stone-800 dark:text-stone-200">Ananya Sharma</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Contributor</p>
+</footer>
+</blockquote>
+<blockquote class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30">
+<p class="text-lg italic text-stone-600 dark:text-stone-400">"Volunteering as a translator has been incredibly rewarding. I'm helping bridge language barriers and making our culture accessible to all."</p>
+<footer class="mt-4 pt-4 border-t border-primary/10 dark:border-primary/20">
+<p class="text-base font-bold text-stone-800 dark:text-stone-200">Rohan Das</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Volunteer</p>
+</footer>
+</blockquote>
+<blockquote class="bg-background-light dark:bg-background-dark p-6 rounded-xl border border-primary/20 dark:border-primary/30">
+<p class="text-lg italic text-stone-600 dark:text-stone-400">"The support from Dharohar's donation drive has been a lifeline for our weaving cooperative. It allows us to continue our ancestral craft."</p>
+<footer class="mt-4 pt-4 border-t border-primary/10 dark:border-primary/20">
+<p class="text-base font-bold text-stone-800 dark:text-stone-200">Lakshmi Bai</p>
+<p class="text-sm text-stone-500 dark:text-stone-400">Artisan</p>
+</footer>
+</blockquote>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h3 class="text-3xl md:text-4xl font-bold max-w-3xl mx-auto text-stone-900 dark:text-white">Ready to Make a Difference?</h3>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-stone-600 dark:text-stone-400">Your contribution, big or small, helps weave the future of India's cultural narrative.</p>
+<div class="mt-8">
+<button class="px-12 py-4 rounded-lg bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">Sign Up &amp; Contribute</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contribute.html">Contribute</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</div>
+<div class="flex justify-center gap-6 mb-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 4.52c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm-1.002 2.182c-1.026.046-1.636.21-2.17.41a3.002 3.002 0 00-1.116.853 3.002 3.002 0 00-.853 1.116c-.2.534-.365 1.144-.41 2.17-.047 1.02-.058 1.35-.058 3.659s.01 2.639.058 3.659c.045 1.026.21 1.636.41 2.17a3.002 3.002 0 00.853 1.116 3.002 3.002 0 001.116.853c.534.2 1.144.365 2.17.41 1.02.047 1.35.058 3.659.058s2.639-.01 3.659-.058c1.026-.045 1.636-.21 2.17-.41a3.002 3.002 0 001.116-.853 3.002 3.002 0 00.853-1.116c.2-.534.365-1.144.41-2.17.047-1.02.058-1.35.058-3.659s-.01-2.639-.058-3.659c-.045-1.026-.21-1.636-.41-2.17a3.002 3.002 0 00-.853-1.116 3.002 3.002 0 00-1.116-.853c-.534-.2-1.144-.365-2.17-.41-1.02-.047-1.35-.058-3.659-.058zM12 8.438a3.563 3.563 0 100 7.125 3.563 3.563 0 000-7.125zm0 9.25a5.688 5.688 0 110-11.375 5.688 5.688 0 010 11.375zM17.625 6.375a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.701V8.115l6.864 4.036-6.864 3.734z"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+</svg>
+</a>
+</div>
+<p class="text-center text-sm text-stone-500 dark:text-stone-400">© 2025 Dharohar. All rights reserved.</p>
+</div>
+</footer>
+</div>
+
+</body></html>

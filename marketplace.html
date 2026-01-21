@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dharohar – Artisan Marketplace</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec4913",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20 border-b border-primary/20 dark:border-primary/30">
+<div class="flex items-center gap-3">
+<img src="Logo.png" alt="Description" class="h-14 w-14" />
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-2xl font-bold text-stone-900 dark:text-white">Dharohar</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-base font-medium hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="museumpage.html">Museum</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="map.html">Map</a>
+<a class="text-base font-medium hover:text-primary transition-colors" href="stories.html">Stories</a>
+<a class="text-base font-medium text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<a href="signup.html" class="px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">
+  Sign Up
+</a>
+<a href="login.html" class="px-6 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+  Login
+</a>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative h-[50vh] md:h-[60vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUgRijJRm8IuWJ3NAH0BhL5OeesH56oURLqnIj4T-8cz_3WwFoRL7UziRq_LwtbLnjAHxOF1MbrPyUcyp_JulfQp0vxNf35wuiinDZnW1GT92jDH-9XIyGM4I-f0MsGM3_1WZOIStjMT3jJhgcqa2ys3v6548OGThl-Ed0wfbe1yEzxo441tauO86B3Vzs3GuWAWnr8kPtx8IoXP8TNPfjA3uFBFB5gUxDmiX1rYZ_US70jtWjU6mM50YYm8GAoP0MQn62r5pwQLk');">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg">Support India’s Artisans</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl drop-shadow">Shop unique handmade crafts and empower local communities.</p>
+</div>
+</section>
+<section class="py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row gap-12">
+<aside class="md:w-1/4">
+<h3 class="text-2xl font-bold mb-6 text-stone-900 dark:text-white">Filters</h3>
+<div class="space-y-6">
+<div>
+<h4 class="font-bold mb-3 text-stone-800 dark:text-stone-300">Category</h4>
+<div class="space-y-2">
+<label class="flex items-center">
+<input class="h-4 w-4 rounded border-stone-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-2 text-stone-600 dark:text-stone-400">Textile</span>
+</label>
+<label class="flex items-center">
+<input class="h-4 w-4 rounded border-stone-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-2 text-stone-600 dark:text-stone-400">Jewelry</span>
+</label>
+<label class="flex items-center">
+<input class="h-4 w-4 rounded border-stone-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-2 text-stone-600 dark:text-stone-400">Home Décor</span>
+</label>
+<label class="flex items-center">
+<input class="h-4 w-4 rounded border-stone-300 text-primary focus:ring-primary" type="checkbox"/>
+<span class="ml-2 text-stone-600 dark:text-stone-400">Paintings</span>
+</label>
+</div>
+</div>
+<div>
+<h4 class="font-bold mb-3 text-stone-800 dark:text-stone-300">Region</h4>
+<select class="w-full rounded-lg border-stone-300 dark:bg-background-dark dark:border-primary/30 focus:border-primary focus:ring focus:ring-primary/50 transition">
+<option>All Regions</option>
+<option>North India</option>
+<option>South India</option>
+<option>East India</option>
+<option>West India</option>
+</select>
+</div>
+<div>
+<h4 class="font-bold mb-3 text-stone-800 dark:text-stone-300">Price Range</h4>
+<input class="w-full h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer dark:bg-stone-700 [&amp;::-webkit-slider-thumb]:bg-primary" max="10000" min="0" type="range"/>
+<div class="flex justify-between text-sm text-stone-600 dark:text-stone-400 mt-1">
+<span>₹0</span>
+<span>₹10,000+</span>
+</div>
+</div>
+</div>
+</aside>
+<div class="md:w-3/4">
+<div class="relative mb-8">
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border border-primary/30 bg-background-light dark:bg-background-dark focus:ring-primary focus:border-primary transition-colors" placeholder="Search for products..." type="search"/>
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<svg class="h-5 w-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden flex flex-col">
+<div class="overflow-hidden">
+<img alt="Handwoven Shawl" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV8jbcC2-iJsXS4yrJiLUQVXdZq7CFuc1adP3Nu8jMQqPnl1vrzABWmvTgWdKvgBRqcTPolbYmIoKTZWcDmRuukBBsFU-dMpItLJbwUKBxzC9uhDFGZJGXuW0WUxu44tnJRBvi1dIAsW9HOO9NTd6voyyC4Sej2ufskB1ZZD6UdSowVClNd0mPgLhU-_GzhGo2W5FuewkqnBglAtAr36MyDiWixcD0yztFu3xELpX7jT0JS5VkbbEVdmTch5_g3RahKjA3KPDioXY"/>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h4 class="text-xl font-bold text-stone-900 dark:text-white">Handwoven Shawl</h4>
+<p class="mt-1 text-sm text-stone-600 dark:text-stone-400">by Ritu Kumar</p>
+<p class="mt-2 font-bold text-lg text-primary">₹2,500</p>
+<button class="mt-4 w-full px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="group bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden flex flex-col">
+<div class="overflow-hidden">
+<img alt="Terracotta Vase" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOjqQab-12-hL5p5wm62vd4hylbgs56p5nov2PbnWFqNU_gl-ikwRzXtaICwnqHegNE-XgdcCOKO7atg8IZPY6bh002MYOrV_TKFMLMNm8lW6slB6B8JTDA1wqpS2TrWDAlOK4ywW1w23DMWCMu9kswzydtSA6_uhkWAAkgpj4923klCKbvHzW5nyw3HpyyrNCwCkOuMn9wuQR8mHPfv85Bq1pmLwQt2-L1lQvHT6ueuOomUFbOrUuSDPwG6aU-Pb3-ArLuUmPeo8"/>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h4 class="text-xl font-bold text-stone-900 dark:text-white">Terracotta Vase</h4>
+<p class="mt-1 text-sm text-stone-600 dark:text-stone-400">by The Clay Studio</p>
+<p class="mt-2 font-bold text-lg text-primary">₹1,200</p>
+<button class="mt-4 w-full px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="group bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden flex flex-col">
+<div class="overflow-hidden">
+<img alt="Madhubani Painting" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBztGbWyFwfmr38qlPJLrQqOX1SIqMTz3IQqpS5UV6dqFuVR_OF47vTF-_xp3qN57JvoT_6FxmrAcFUvAPYVT14GVEdIaSy3by2-Xgd1-ea_H1sZGmE39IN_gzjFW70WImykffFtZBX9SdLumrU-kMVGCGVOyyr3p3quQhYTRqXgRDSk5bWMTSaevzyXtJrafTpGu2HGrdWNvIpcLXuy9QelrHKbmtCy4Bgb5A17cyaAtzJ47pG6JnqUdiT1swbd6rT6RYuiE0AKx8"/>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h4 class="text-xl font-bold text-stone-900 dark:text-white">Madhubani Painting</h4>
+<p class="mt-1 text-sm text-stone-600 dark:text-stone-400">by Sita Devi</p>
+<p class="mt-2 font-bold text-lg text-primary">₹5,000</p>
+<button class="mt-4 w-full px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="group bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden flex flex-col">
+<div class="overflow-hidden">
+<img alt="Silver Jhumkas" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8rSz9xKFZe8b9lNGx-7Hcza9Yx09sBzxw83JPiqjFElmqhUr7sZ5fabJaHNRIvusbXNpJbG4q9sG9tdse7NOX7S6OOx13UZ1_JoqMvqxlhGt2TxTB3PldH20X8r5j8VxIWH0pYwwWZBlLcRiK3nI0RebDv1U8z3wNAo1P4nSfk0uNzWMzjwrTpc3a3Ticin05B1tjhrsx3jfdpZmb_WzDgKAnNyV3pP5q1Lmm713nzVy6G79ENRAhCndqyIBlFo4mPB4g8bwv_bw"/>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h4 class="text-xl font-bold text-stone-900 dark:text-white">Silver Jhumkas</h4>
+<p class="mt-1 text-sm text-stone-600 dark:text-stone-400">by Amrapali Jewels</p>
+<p class="mt-2 font-bold text-lg text-primary">₹3,800</p>
+<button class="mt-4 w-full px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="group bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden flex flex-col">
+<div class="overflow-hidden">
+<img alt="Block Print Cushion Cover" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvxqp0HFOvVvRRevA8UMyvSQBN7MeQZzCjhE2uFEcA_aR9C7K3FbkQivNqlSLGVLW8rXmi4bXIkH0rrs6oGfA-oiwFwzkOAk0SeQjkqIndKl7B0WehhXxACbSnsYoWLiDWcXTugGka3ckqRdla4AvaZEmwZbcHDyLw9mOidGilhMfM1IXPBinMo6xTnJYWiDPpujFnBT3oX0lQmHXdteBGdwjfRNJmahdX368nidgvBg3kmfv6kIjcsGK_zx6DvzEPSndudaR6MIo"/>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h4 class="text-xl font-bold text-stone-900 dark:text-white">Block Print Cushion</h4>
+<p class="mt-1 text-sm text-stone-600 dark:text-stone-400">by Fabindia</p>
+<p class="mt-2 font-bold text-lg text-primary">₹850</p>
+<button class="mt-4 w-full px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Add to Cart</button>
+</div>
+</div>
+<div class="group bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden flex flex-col">
+<div class="overflow-hidden">
+<img alt="Brass Diya" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs2BZmFb9uJn33sbfqkc4dM7UfAxmOk5Em5jxd2M0Lb3t6sc5K3iEozR2P0KdizADiW6eVc4jyARBeUQrsLTK-qpUlH54xX9gobK1kuqipu2I4qUB2yOpHNjUoQ0ROby1vcoK12Jr1GsPX4G2m2HNwxuKAS5E25mZ2_7BN6TDPwgo5iuffqpf6Wpoa1nLHkPLkQQV83pjhMRHurY3rsccBRkt0cmyztPFrd1nY6NEIEOulQAAJIRU1067wefEO4FePidkgpMuYlvk"/>
+</div>
+<div class="p-4 flex-grow flex flex-col">
+<h4 class="text-xl font-bold text-stone-900 dark:text-white">Brass Diya</h4>
+<p class="mt-1 text-sm text-stone-600 dark:text-stone-400">by Isha Crafts</p>
+<p class="mt-2 font-bold text-lg text-primary">₹990</p>
+<button class="mt-4 w-full px-6 py-2 rounded-lg bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-colors">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 bg-primary/5 dark:bg-primary/10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-stone-900 dark:text-white">Artisan Spotlight</h3>
+<div class="relative">
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-8">
+<div class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 flex flex-col md:flex-row items-center gap-8 bg-background-light dark:bg-background-dark p-8 rounded-xl border border-primary/20 dark:border-primary/30">
+<img alt="Artisan Meena" class="w-48 h-48 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI4zAgrCCt_LzK2ooeJfxIVy8gW-YFwwcOgu0FzFFqF2xBCKCpMtP6zGJKHP0jhK0IqovXKhTPd985R3qFVOIif4gPOn-LV9XbvOi2mCOPJqBRcoC21y07VWEuVqcrRIb2rGlzROGz_28xW-5Puf4bQGsjdJDC8yVTHCRziJIIpuwbh-VCWq_GYH8Z3YyfpVD2OThrBKRQo_wLi6Lpt-N05yas5chRs4JchRqJ5g-FJ_YWkKSci_nMexg9YtwmrKPExa6YekOmyVA"/>
+<div>
+<h4 class="text-2xl font-bold text-stone-900 dark:text-white">Meena, the Weaver</h4>
+<p class="mt-2 text-base text-stone-600 dark:text-stone-400">"Weaving is not just my livelihood; it's a story passed down through generations. Each thread I weave carries the legacy of my ancestors. With Dharohar, I can share this story with the world."</p>
+</div>
+</div>
+<div class="snap-center shrink-0 w-full md:w-2/3 lg:w-1/2 flex flex-col md:flex-row items-center gap-8 bg-background-light dark:bg-background-dark p-8 rounded-xl border border-primary/20 dark:border-primary/30">
+<img alt="Artisan Raj" class="w-48 h-48 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3dp-QQ6gddayPVJLU4_y0gHEDqM-UIEAqlETM8eXue_o4Z-3GzawsyRoaFdETO07eSToURe3IeE8uavLfYrLHBgq-RMgyc-1y0ILo2OKJvrnm4uWOwNlaLqwulTylB51IuZ4bRCjqOIP7657wkptZb8wLln61PAU4EnBDpWPr02ak9l3es5D62QyWaXsFicMmatVykd42COjspyXU8QDsRIZzStNXRWAnf5KIJkjLAUcep-E8MYqO2zdwRByU3Xz1-n6Gl51oOnY"/>
+<div>
+<h4 class="text-2xl font-bold text-stone-900 dark:text-white">Raj, the Potter</h4>
+<p class="mt-2 text-base text-stone-600 dark:text-stone-400">"The earth gives me clay, and I give it a soul. My hands shape the pots, but my heart fills them with life. Selling on this marketplace helps me sustain my family and my art."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-2xl mx-auto bg-background-light dark:bg-background-dark p-8 rounded-xl border border-primary/20 dark:border-primary/30">
+<h3 class="text-3xl font-bold text-center mb-6 text-stone-900 dark:text-white">Secure Checkout</h3>
+<form action="#" class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="email">Email Address</label>
+<div class="mt-1">
+<input class="block w-full rounded-md border-stone-300 dark:bg-background-dark dark:border-primary/30 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="email" name="email" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-stone-700 dark:text-stone-300" for="card-details">Card Details</label>
+<div class="mt-1">
+<div class="p-3 border border-stone-300 dark:border-primary/30 rounded-md">
+                                        Card element will be here
+                                    </div>
+</div>
+</div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+                                Pay Now
+                            </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="about.html">About</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="contribute.html">Contribute</a>
+<a class="text-base text-stone-600 dark:text-stone-400 hover:text-primary transition-colors" href="marketplace.html">Marketplace</a>
+</div>
+<div class="flex justify-center gap-6 mb-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 4.52c.636-.247 1.363.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm-1.002 2.182c-1.026.046-1.636.21-2.17.41a3.002 3.002 0 00-1.116.853 3.002 3.002 0 00-.853 1.116c-.2.534-.365 1.144-.41 2.17-.047 1.02-.058 1.35-.058 3.659s.01 2.639.058 3.659c.045 1.026.21 1.636.41 2.17a3.002 3.002 0 00.853 1.116 3.002 3.002 0 001.116.853c.534.2 1.144.365 2.17.41 1.02.047 1.35.058 3.659.058s2.639-.01 3.659-.058c1.026-.045 1.636-.21 2.17-.41a3.002 3.002 0 001.116-.853 3.002 3.002 0 00.853-1.116c.2-.534.365-1.144.41-2.17.047-1.02.058-1.35.058-3.659s-.01-2.639-.058-3.659c-.045-1.026-.21-1.636-.41-2.17a3.002 3.002 0 00-.853-1.116 3.002 3.002 0 00-1.116-.853c-.534-.2-1.144-.365-2.17-.41-1.02-.047-1.35-.058-3.659-.058zM12 8.438a3.563 3.563 0 100 7.125 3.563 3.563 0 000-7.125zm0 9.25a5.688 5.688 0 110-11.375 5.688 5.688 0 010 11.375zM17.625 6.375a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.701V8.115l6.864 4.036-6.864 3.734z"></path>
+</svg>
+</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+</svg>
+</a>
+</div>
+<p class="text-center text-sm text-stone-500 dark:text-stone-400">© 2025 Dharohar. All rights reserved.</p>
+</div>
+</footer>
+</div>
+
+</body></html>
