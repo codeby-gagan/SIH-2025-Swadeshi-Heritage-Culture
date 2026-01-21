@@ -75,6 +75,11 @@ The platform focuses on supporting **Atmanirbhar Bharat** by empowering local ar
 
 ---
 
+## 🌐 Live Demo
+https://codeby-gagan.github.io/SIH-2025-Swadeshi-Heritage-Culture/
+
+---
+
 ## ➤ License
 This project is developed exclusively for **Smart India Hackathon 2025**.  
 © 2025 **Decode-25#Team**
