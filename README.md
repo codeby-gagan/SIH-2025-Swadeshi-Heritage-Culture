@@ -44,11 +44,53 @@ The platform focuses on supporting **Atmanirbhar Bharat** by empowering local ar
 
 ---
 
-## ➤ Screenshots
+## ➤ Project Screenshots
 
-![Homepage](screenshots/home.png)  
-![Culture Page](screenshots/culture.png)  
-![Dashboard](screenshots/dashboard.png)  
+<table>
+  <tr>
+    <td align="center">
+      <b>Home</b><br>
+      <img src="Screenshots/Home.png" width="400">
+    </td>
+    <td align="center">
+      <b>Festivals</b><br>
+      <img src="Screenshots/Festivals.png" width="400">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <b>Gallery</b><br>
+      <img src="Screenshots/Gallery.png" width="400">
+    </td>
+    <td align="center">
+      <b>Contribution</b><br>
+      <img src="Screenshots/Contribution.png" width="400">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <b>Marketplace</b><br>
+      <img src="Screenshots/Marketplace.png" width="400">
+    </td>
+    <td align="center">
+      <b>Quizzes</b><br>
+      <img src="Screenshots/Quizes.png" width="400">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <b>Sign Up</b><br>
+      <img src="Screenshots/Sign%20up.png" width="400">
+    </td>
+    <td align="center">
+      <b>Stories</b><br>
+      <img src="Screenshots/Stories.png" width="400">
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -75,7 +117,7 @@ The platform focuses on supporting **Atmanirbhar Bharat** by empowering local ar
 
 ---
 
-## 🌐 Live Demo
+## ➤ Live Demo
 https://codeby-gagan.github.io/SIH-2025-Swadeshi-Heritage-Culture/
 
 ---
